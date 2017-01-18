@@ -1,0 +1,39 @@
+<ion-view view-title="Dojo Events">
+  <ion-content>
+    <div class="card">
+        <div class="item item-divider">
+            Do not miss it!
+            <span class="badge badge-assertive">{{event.label}}</span>
+        </div>
+        <div class="item item-thumbnail-left item-text-wrap">
+            <img ng-src="{{baseURL+event.image}}" alt="{{event.image}}">
+            <h2>{{event.name}}
+             <span class="badge">{{event.price | currency}}</span></h2>
+            <p>{{event.description}}</p>
+        </div>
+      <div class="card">
+          <div class="item item-divider">
+            This Month's Events
+            <span class="badge badge-assertive">{{promotion.label}}</span>
+          </div>
+          <div class="item item-thumbnail-left item-text-wrap">
+               <img ng-src="{{baseURL+promotion.image}}" alt="{{promotion.name}}">
+                <h2>{{promotion.name}}
+                <!-- <span class="badge">{{promotion.price | currency}}</span></h2> -->
+                <p>{{promotion.description}}</p>
+          </div>
+      </div>
+      <div class="card">
+          <div class="item item-divider">
+            About the author
+          </div>
+          <div class="item item-thumbnail-left item-text-wrap">
+               <img ng-src="{{baseURL+leader.image}}" alt="{{leader.name}}">
+                <h2>{{leader.name}}</h2>
+                <h4>{{leader.designation}}</h4>
+                <p>{{leader.description}}</p>
+          </div>
+      </div>        
+    </div>
+  </ion-content>
+</ion-view>

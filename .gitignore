@@ -6,3 +6,6 @@ platforms/
 plugins/
 resources/
 hooks/
+www/css/
+www/lib/
+www/img/

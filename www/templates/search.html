@@ -1,0 +1,28 @@
+<ion-view view-title="Search Events">
+   <div class="tabs-striped tabs-color-royal">
+    <ul class="tabs">
+        <li ng-class="{active:isSelected(1)}" class="tab-item">
+            <a ng-click="select(1)">All Events</a></li>
+        <li ng-class="{active:isSelected(2)}" class="tab-item">
+            <a ng-click="select(2)">By Area</a></li>
+        <li ng-class="{active:isSelected(3)}" class="tab-item">
+            <a ng-click="select(3)">By Type</a></li>
+        <li ng-class="{active:isSelected(4)}" class="tab-item">
+            <a  ng-click="select(4)">By Date</a></li>
+    </ul>
+  </div>
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="event in events | filter:{category: filtText}" href="#/app/event/{{event.id}}" class="item-thumbnail-left">
+        <img ng-src="{{baseURL+event.image}}">
+        <h2>{{event.name}}
+         <span style="font-size:75%">{{event.price | currency}}</span>
+        <span class="badge badge-assertive">{{event.label}}</span></h2>
+        <p>{{event.description}}</p>
+        <ion-option-button class="button-assertive icon ion-plus-circled"
+            ng-click="addFavorite({{event.id}})">
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

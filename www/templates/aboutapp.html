@@ -1,0 +1,27 @@
+<ion-view view-title="About Dojo Events">
+  <ion-content>
+      <div class="card">
+          <div class="item item-divider">
+            Dojo Events App
+          </div>
+          <div class="item item-text-wrap">               
+            <h2>This smartphone application allows you to find a list of training events, filtered by region or martial art.
+               Once you’re registered and logged in, you can add and publish new events, comment any existing events, 
+               search for training course and add them to your favourites.</h2>
+          </div>          
+      </div>
+      <div class="card">
+          <div class="item item-divider">
+            Authors
+          </div>
+          <div class="list list-inset">
+            <div class="item item-thumbnail-left item-avatar item-text-wrap" ng-repeat="leader in leaders">
+                <img ng-src="{{baseURL+leader.image}}" alt="{{leader.name}}">
+                <h2>{{leader.name}}</h2>
+                <h4>{{leader.designation}}</h4>
+                <p>{{leader.description}}</p>            
+            </div>
+          </div>
+      </div>         
+  </ion-content>
+</ion-view>
